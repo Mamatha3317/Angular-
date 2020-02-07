@@ -1,0 +1,54 @@
+<p>demo2 works!</p>
+<div>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>
+                <input type="text" [(ngModel)]="item.eid">
+            </td>
+        </tr>
+        <tr>
+            <td>EName :</td>
+            <td>
+                <input type="text" [(ngModel)]="item.ename">
+            </td>
+        </tr>
+        <tr>
+            <td>joindate</td>
+            <td>
+                <input type="date" [(ngModel)]="item.joindate">
+            </td>
+        </tr>
+        <tr>
+            <td>Designation</td>
+            <td>
+                <select          [(ngModel)]="item.desig">
+            
+                    <option>Programmer</option>
+                    <option>Traine</option>
+                    <option>Project lead</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>salary</td>
+            <td>
+                <input type="number" [(ngModel)]="item.salary">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="Add()">Register</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <pre>
+    id :{{item.eid}}
+    name:{{item.ename}}
+    joindate:{{item.joindate}}
+    desiganation :{{item.desig}}
+    salary:{{item.salary}}
+        </pre>
+</div>

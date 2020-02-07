@@ -1,0 +1,22 @@
+<p>view works!</p>
+<table>
+    <tr>
+        <td>UserName</td>
+        <td>
+            <input type="text" [(ngModel)]='obj.username'>
+        </td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>
+            <input type="text" [(ngModel)]='obj.password'>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)='s()'>Click to login </button>
+        </td>
+    </tr>
+</table>
+
+<h1>{{invalid}}</h1>

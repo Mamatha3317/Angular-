@@ -1,0 +1,52 @@
+<p>project-demo works!</p>
+<h1>Project List</h1>
+<div id="project">
+    <table>
+        <tr>
+            <td>PID</td>
+            <td><input type="text" [(ngModel)]="pid"></td>
+        </tr>
+        <tr>
+            <td>PNAME</td>
+            <td><input type="text" [(ngModel)]="pname"></td>
+        </tr>
+        <tr>
+            <td>DOMAIN</td>
+            <td><select  [(ngModel)]="domain">
+                <option>.NET</option>
+                <option>JAVA</option>
+                <option>ML</option>
+                <option>Sap</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>SDATE</td>
+            <td><input type="date" [(ngModel)]="startdate"></td>
+        </tr>
+        <tr>
+            <td>EDATE</td>
+            <td><input type="date" [(ngModel)]="enddate"></td>
+        </tr>
+        <tr>
+            <td>
+                <button (click)='Add()'>Add</button>
+            </td>
+        </tr>
+    </table>
+    <table border=1>
+        <tr>
+            <th>PID</th>
+            <th>PNAME</th>
+            <th>DOMAIN</th>
+            <th>SDATE</th>
+            <th>EDATE</th>
+        </tr>
+        <tr *ngFor="let item of list">
+            <td>{{item.pid}}</td>
+            <td>{{item.pname}}</td>
+            <td>{{item.domain}}</td>
+            <td>{{item.startdate}}</td>
+            <td>{{item.enddate}}</td>                 
+            </tr>
+    </table>
+</div>
